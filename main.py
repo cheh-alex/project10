@@ -1,16 +1,12 @@
-# This is a sample Python script.
+from models import User
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# u1 = User(name = 'Victor',age = 45,email = 'alien1982@hotmail.fr')
+# u2 = User(name = 'Maxim',age = 40,email = 'maxfactor@hotmail.com')
+# u1.save()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+u = User.get(User.name == 'Victor')
+print(u)
+print(u.age)
+print(u.email)
+u.delete_instance()
